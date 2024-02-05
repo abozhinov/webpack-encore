@@ -34,7 +34,7 @@ jobs:
           - name: pnpm
             working_directory: test_apps/pnpm
             script: |
-              pnpm install --frozen-lockfile
+              pnpm install --immutable
               pnpm add --save-dev ../../webpack-encore.tgz
               pnpm run encore dev
               pnpm run encore production
@@ -42,7 +42,7 @@ jobs:
           - name: pnpm (with Babel)
             working_directory: test_apps/pnpm-with-babel
             script: |
-              pnpm install --frozen-lockfile
+              pnpm install --immutable
               pnpm add --save-dev ../../webpack-encore.tgz
               pnpm run encore dev
               pnpm run encore production
@@ -50,7 +50,7 @@ jobs:
           - name: pnpm (with external Babel configuration file)
             working_directory: test_apps/pnpm-with-external-babel-config
             script: |
-              pnpm install --frozen-lockfile
+              pnpm install --immutable
               pnpm add --save-dev ../../webpack-encore.tgz
               pnpm run encore dev
               pnpm run encore production
@@ -59,7 +59,7 @@ jobs:
             working_directory: test_apps/yarn-pnp
             script: |
               yarn set version berry
-              yarn install --frozen-lockfile
+              yarn install --immutable
               yarn add --dev ../../webpack-encore.tgz
               yarn run encore dev
               yarn run encore production
@@ -68,7 +68,7 @@ jobs:
             working_directory: test_apps/yarn-pnp-with-babel
             script: |
               yarn set version berry
-              yarn install --frozen-lockfile
+              yarn install --immutable
               yarn add --dev ../../webpack-encore.tgz
               yarn run encore dev
               yarn run encore production
@@ -77,7 +77,7 @@ jobs:
             working_directory: test_apps/yarn-pnp-with-external-babel-config
             script: |
               yarn set version berry
-              yarn install --frozen-lockfile
+              yarn install --immutable
               yarn add --dev ../../webpack-encore.tgz
               yarn run encore dev
               yarn run encore production
