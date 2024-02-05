@@ -34,7 +34,7 @@ jobs:
           - name: pnpm
             working_directory: test_apps/pnpm
             script: |
-              pnpm install --immutable
+              pnpm install --frozen-lockfile
               pnpm add --save-dev ../../webpack-encore.tgz
               pnpm run encore dev
               pnpm run encore production
@@ -42,7 +42,7 @@ jobs:
           - name: pnpm (with Babel)
             working_directory: test_apps/pnpm-with-babel
             script: |
-              pnpm install --immutable
+              pnpm install --frozen-lockfile
               pnpm add --save-dev ../../webpack-encore.tgz
               pnpm run encore dev
               pnpm run encore production
@@ -50,7 +50,7 @@ jobs:
           - name: pnpm (with external Babel configuration file)
             working_directory: test_apps/pnpm-with-external-babel-config
             script: |
-              pnpm install --immutable
+              pnpm install --frozen-lockfile
               pnpm add --save-dev ../../webpack-encore.tgz
               pnpm run encore dev
               pnpm run encore production
